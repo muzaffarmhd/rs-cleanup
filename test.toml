@@ -1,0 +1,3 @@
+[rules.documents]
+extensions = ["pdf", "docx"]
+destination = "Documents"

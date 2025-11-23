@@ -1,5 +1,6 @@
 use clap::Parser;
 use std::process::Command;
+use crate::internal::parse::parse_rules;
 
 #[derive(Parser, Debug)]
 pub struct SimulateArgs {
@@ -7,8 +8,10 @@ pub struct SimulateArgs {
 }
 
 pub fn execute(args: SimulateArgs) {
-    Command::new("tree")
-        .arg(&args.tree)
-        .status()
-        .expect("Failed to execute tree command");
+    // Command::new("tree")
+    //     .arg(&args.tree)
+    //     .status()
+    //     .expect("Failed to execute tree command");
+
+    parse_rules(&args.tree);
 }
